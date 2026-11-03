@@ -6,8 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/FaseEspacial.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/FaseEspacial_Nivel1.unity
+    guid: 8ff6ba956c375e640beebc1328584426
+  - enabled: 1
+    path: Assets/Scenes/FasePlataformas_Boss.unity
+    guid: 514850f3169126f478b75420acc70dab
+  - enabled: 1
+    path: Assets/Scenes/FasePlataformas_Nivel1.unity
+    guid: 309f1ab928b31914cb95bb4870fe123c
+  - enabled: 1
+    path: Assets/Scenes/IntroAnime.unity
+    guid: 0eb0126ee0ef8814ba740a94de17ae7e
+  - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: ea8b75383d80b5c48b0c7573a42361d5
+  - enabled: 1
+    path: Assets/Scenes/PantallaHistoria.unity
+    guid: 1959755f84ec44243ad27d2afd0b2bec
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
