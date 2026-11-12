@@ -1,10 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// Capa de fondo con parallax y bucle infinito sin costuras.
-/// Crea en tiempo de ejecución una copia de la capa colocada justo a su derecha y las recoloca
-/// cuando la cámara ha avanzado un ancho completo.
-/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class ParallaxLayer : MonoBehaviour
 {
@@ -14,8 +9,8 @@ public class ParallaxLayer : MonoBehaviour
     [SerializeField] private Camera camara;
 
     private Transform copia;
-    private float inicioX;   // posición X base de la capa (se desplaza de ancho en ancho)
-    private float ancho;     // ancho de la capa en unidades de mundo
+    private float inicioX;
+    private float ancho;
 
     private void Awake()
     {
@@ -25,7 +20,7 @@ public class ParallaxLayer : MonoBehaviour
         ancho = sr.bounds.size.x;
         inicioX = transform.position.x;
 
-        // Copia visual para cubrir el hueco a la derecha.
+       
         GameObject go = new GameObject(name + "_Copia");
         go.transform.SetParent(transform.parent, false);
         go.transform.localScale = transform.localScale;
@@ -45,10 +40,10 @@ public class ParallaxLayer : MonoBehaviour
         if (camara == null) return;
 
         float camX = camara.transform.position.x;
-        float sinParallax = camX * (1f - seguimientoCamara); // desplazamiento "sin mover" de la capa
-        float conParallax = camX * seguimientoCamara;        // desplazamiento que sigue a la cámara
+        float sinParallax = camX * (1f - seguimientoCamara);
+        float conParallax = camX * seguimientoCamara;
 
-        // Reposicionamos la base cuando la capa se ha desplazado un ancho completo respecto a la cámara.
+        
         if (sinParallax > inicioX + ancho) inicioX += ancho;
         else if (sinParallax < inicioX - ancho) inicioX -= ancho;
 
